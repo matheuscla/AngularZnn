@@ -1,0 +1,92 @@
+<div class="row z-depth-1 notepad-form">
+  <h4 class="center-align">New Survivor</h4>
+  <form [formGroup]="survivorForm" (ngSubmit)="onSubmit(survivorForm.value)">
+    <div class="col s12 m6">
+      <label>Name: </label>
+      <input type="text"
+             formControlName="name"
+             id="Name">
+    </div>
+
+    <div class="col s12 m6">
+      <label>Age: </label>
+      <input type="text"
+             formControlName="age"
+             id="age">
+    </div>
+
+    <div class="col s12 m4">
+      <label>Gender: </label>
+      <input type="text"
+             id="gender"
+             formControlName="gender">
+    </div>
+
+    <div class="col s12 m4">
+      <label>Lat: </label>
+      <input type="text"
+             id="lat"
+             formControlName="lat">
+    </div>
+
+    <div class="col s12 m4">
+      <label>Long: </label>
+      <input type="text"
+             id="long"
+             formControlName="long">
+    </div>
+
+    <div class="col s12">
+      <div class="row">
+        <div class="col s2">
+          <img src="assets/icons/raindrop.svg" class="icons">
+        </div>
+        <div class="col s10">
+          <input type="text" placeholder="Water" formControlName="water">
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12">
+      <div class="row">
+        <div class="col s2">
+          <img src="assets/icons/bullet.svg" class="icons">
+        </div>
+        <div class="col s10">
+          <input type="text" placeholder="Ammunition" formControlName="ammo">
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12">
+      <div class="row">
+        <div class="col s2">
+          <img src="assets/icons/cardiogram.svg" class="icons">
+        </div>
+        <div class="col s10">
+          <input type="text" placeholder="Medication" formControlName="medicine">
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12">
+      <div class="row">
+        <div class="col s2">
+          <img src="assets/icons/steak.svg" class="icons">
+        </div>
+        <div class="col s10">
+          <input type="text" placeholder="Food" formControlName="food">
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12 right-align">
+      <button type="submit"
+              [disabled]="!survivorForm.valid"
+              class="btn btn-waved waves-effect waves-light btn-block">
+              Create Survivor
+      </button>
+    </div>
+
+  </form>
+</div>

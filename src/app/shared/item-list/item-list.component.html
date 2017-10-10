@@ -1,0 +1,16 @@
+<div class="card-panel">
+  <h5 class="center-align">Items</h5>
+
+  <div *ngFor="let i of items">
+    <div class="divider"></div>
+    <div class="items">
+      <span>{{i.item.name}}</span>
+      <span>{{i.quantity}}</span>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="items" *ngIf="items && points">
+    <span>Total Points:</span>
+    <span>{{points}}</span>
+  </div>
+</div>

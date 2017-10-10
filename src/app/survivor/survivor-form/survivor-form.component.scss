@@ -1,0 +1,23 @@
+.notepad-form {
+  margin: 2em 0;
+  padding: 2em 0;
+  position: relative;
+  width: 100%;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.icons {
+  width: 100%;
+}
+
+@media (max-width: 650px) {
+  .notepad-form {
+    margin: 2em 0;
+    padding: 2em 0;
+    position: static;
+    width: 100%;
+  }
+}

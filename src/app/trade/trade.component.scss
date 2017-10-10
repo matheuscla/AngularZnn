@@ -1,0 +1,21 @@
+.trade {
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+    width: 80px;
+    display: none;
+
+  }
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.items {
+  padding: 0.5em 0.3em;
+  display: flex;
+  justify-content: space-between;
+}

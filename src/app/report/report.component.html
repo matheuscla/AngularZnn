@@ -1,0 +1,32 @@
+<div class="container">
+  <h3 class="center-align">Reports</h3>
+
+  <div class="row">
+    <app-report-details [reportDescription]="resultInfected?.report.description"
+                        [reportResult1]="resultInfected?.report.average_infected * 100"
+                        [reportIcon]="'/assets/icons/zombie.svg'"
+                        [reportType]="'infecteds'">
+    </app-report-details>
+
+    <app-report-details [reportDescription]="resultSurvivors?.report.description"
+                        [reportResult1]="resultSurvivors?.report.average_healthy * 100"
+                        [reportIcon]="'/assets/icons/freak.svg'"
+                        [reportType]="'survivors'">
+    </app-report-details>
+  </div>
+
+  <div class="row">
+    <app-report-details [reportDescription]="resultInfectedPoints?.report.description"
+                        [reportResult1]="resultInfectedPoints?.report.total_points_lost"
+                        [reportIcon]="'/assets/icons/zombie_hand.svg'"
+                        [reportType]="'infecteds'">
+    </app-report-details>
+
+    <app-report-details [reportDescription]="resultPeopleInventory?.report.description"
+                        [reportResult1]="resultPeopleInventory?.report.average_items_quantity_per_person"
+                        [reportResult2]="resultPeopleInventory?.report.average_items_quantity_per_healthy_person"
+                        [reportIcon]="'/assets/icons/trolley.svg'"
+                        [reportType]="'survivors'">
+    </app-report-details>
+  </div>
+</div>

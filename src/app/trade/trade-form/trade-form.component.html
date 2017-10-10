@@ -1,0 +1,128 @@
+<div class="row">
+  <div class="col s12">
+    <div class="card-panel">
+      <h5 class="center-align">What's your offer</h5>
+      <div class="row">
+        <form class="" >
+          <div class="col s12 m5">
+            <div class="col s12" *ngIf="personData.water">
+              <div class="row">
+                <div class="col s2">
+                  <img src="assets/icons/raindrop.svg" class="icons">
+                </div>
+                <div class="col s10">
+                  <input type="number" placeholder="Water"
+                         min="0"
+                         [max]="personData.water"
+                         [value]="personData.water"
+                         (input)="personData.water = $event.target.value">
+                </div>
+              </div>
+            </div>
+
+            <div class="col s12" >
+              <div class="row">
+                <div class="col s2">
+                  <img src="assets/icons/bullet.svg" class="icons">
+                </div>
+                <div class="col s10">
+                  <input type="number" placeholder="Ammunition"
+                         [value]="personData.ammo"
+                         (input)="personData.ammo = $event.target.value">
+                </div>
+              </div>
+            </div>
+
+            <div class="col s12" >
+              <div class="row">
+                <div class="col s2">
+                  <img src="assets/icons/cardiogram.svg" class="icons">
+                </div>
+                <div class="col s10">
+                  <input type="number" placeholder="Medication"
+                        [value]="personData.medicine"
+                        (input)="personData.medicine = $event.target.value">
+                </div>
+              </div>
+            </div>
+
+            <div class="col s12">
+              <div class="row">
+                <div class="col s2">
+                  <img src="assets/icons/steak.svg" class="icons">
+                </div>
+                <div class="col s10">
+                  <input type="number" placeholder="Food"
+                         [value]="personData.food"
+                         (input)="personData.food = $event.target.value">
+                </div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+            <h4 class="center-align">Points: {{sumPoints(personData)}}</h4>
+          </div>
+          <div class="col s12 m2">
+          </div>
+          <div class="col s12 m5">
+            <div class="col s12">
+              <div class="row">
+                <div class="col s2">
+                  <img src="assets/icons/raindrop.svg" class="icons">
+                </div>
+                <div class="col s10">
+                  <input type="number" placeholder="Water"
+                        [value]="consumerData.water"
+                        (input)="consumerData.water = $event.target.value">
+                </div>
+              </div>
+            </div>
+
+            <div class="col s12">
+              <div class="row">
+                <div class="col s2">
+                  <img src="assets/icons/bullet.svg" class="icons">
+                </div>
+                <div class="col s10">
+                  <input type="number" placeholder="Ammunition"
+                         [value]="consumerData.ammo"
+                         (input)="consumerData.ammo = $event.target.value">
+                </div>
+              </div>
+            </div>
+
+            <div class="col s12">
+              <div class="row">
+                <div class="col s2">
+                  <img src="assets/icons/cardiogram.svg" class="icons">
+                </div>
+                <div class="col s10">
+                  <input type="number" placeholder="Medication"
+                        [value]="consumerData.medicine"
+                        (input)="consumerData.medicine = $event.target.value">
+                </div>
+              </div>
+            </div>
+
+            <div class="col s12">
+              <div class="row">
+                <div class="col s2">
+                  <img src="assets/icons/steak.svg" class="icons">
+                </div>
+                <div class="col s10">
+                  <input type="number" placeholder="Food"
+                         [value]="consumerData.food"
+                        (input)="consumerData.food = $event.target.value">
+                </div>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn btn-large btn-block">Trade items</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+
+</div>

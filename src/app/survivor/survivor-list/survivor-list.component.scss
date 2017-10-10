@@ -1,0 +1,13 @@
+.btn-block {
+  width: 100%;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-around;
+  margin: 1em 0;
+
+  button {
+    font-size: 0.8em;
+  }
+}

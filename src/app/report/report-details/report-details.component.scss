@@ -1,0 +1,36 @@
+.icons {
+  width: 100px;
+}
+
+.reports {
+  display: flex;
+  justify-content: space-around;
+  border-radius: 6px;
+
+  &__statistics {
+    text-align: center;
+    align-self: center;
+    color: #fff;
+    display: block;
+  }
+
+  &__title {
+    font-size: 1.0em;
+  }
+
+  &__result {
+    font-size: 1.6em;
+
+    &--small {
+      font-size: 1em;
+    }
+  }
+}
+
+.infecteds {
+  background-color: #e53935;
+}
+
+.survivors {
+  background-color: #009688;
+}

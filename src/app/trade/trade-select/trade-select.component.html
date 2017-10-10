@@ -1,0 +1,9 @@
+<mz-select-container>
+  <select mz-select
+    (change)="select($event.target.value)"
+    id="options-select"
+    [label]="inputLabel"
+    [placeholder]="inputPlaceholder">
+    <option *ngFor="let option of inputOptions" value="{{option.location}}">{{option.name}}</option>
+  </select>
+</mz-select-container>

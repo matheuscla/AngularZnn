@@ -1,0 +1,14 @@
+<div class="col s12 m4" *ngIf="index < survivorsLength">
+  <div class="card-panel hoverable z-depth-2">
+    <h5 class="center-align truncate">{{survivor?.name}}</h5>
+    <ul class="collection">
+      <li class="collection-item"><strong>Gender:</strong> {{survivor?.gender}}</li>
+      <li class="collection-item"><strong>Age:</strong> {{survivor?.age}}</li>
+    </ul>
+    <div class="btn-group">
+      <button type="button" [routerLink]="[id]" class="btn waves-effect waves-light">Info</button>
+      <button type="button" class="btn waves-effect waves-light">Update</button>
+    </div>
+    <button type="button" class="red darken-4 btn btn-block" name="button">Report</button>
+  </div>
+</div>

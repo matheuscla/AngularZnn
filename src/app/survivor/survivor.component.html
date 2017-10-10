@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col s12 m4">
+    <app-survivor-form></app-survivor-form>
+  </div>
+
+  <div class="col s12 m8">
+    <h1 class="center-align">Survivors</h1>
+    <app-search-bar (search)=searchSurvivors($event)></app-search-bar>
+    <div class="row">
+      <app-survivor-list *ngFor="let survivor of survivors | filterBy: survivorFilter; let i = index"
+                         [survivor]="survivor"
+                         [index]="i"
+                         [survivorsLength]="survivorsLength"></app-survivor-list>
+    </div>
+
+    <div class="center-align" *ngIf="survivors != []">
+      <button type="button" class="btn" (click)="moreSurvivors()">More Survivors</button>
+    </div>
+
+  </div>
+</div>
